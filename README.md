@@ -76,3 +76,72 @@ Note you can also view landscape mode so that the live feed covers full pc wides
 
 
 And all process is personally verified it works brilliantly
+
+
+
+
+
+
+⭐⭐⭐WIRELESS METGOD PERSINALLY TESTED WORKS BRIILANTLY WITHOUT ANY LAGS JUST LIKE USB METHIOD
+
+
+Here is your complete, lag-free guide to running **scrcpy** wirelessly just like a USB cable. Save this guide for quick reference!
+
+---
+
+### Wireless Scrcpy Connection Guide
+
+#### Step 1: Initial Setup (Required only once with a USB cable)
+
+1. **Connect your phone to your laptop** using a USB cable.
+2. Open **Command Prompt (cmd)** or **PowerShell** on your laptop.
+3. Type the following command and press Enter to switch ADB to network mode:
+```cmd
+adb tcpip 5555
+
+```
+
+
+*(You should see a message saying: `restarting in TCP mode port: 5555`)*
+
+
+4. **Unplug the USB cable** from your phone.
+
+
+
+---
+
+#### Step 2: Find Your Phone's IP Address
+
+1. Go to your phone's **Settings** > **Wi-Fi**.
+2. Tap on your connected Wi-Fi network name to view details.
+3. Look for your phone's **IP Address** (it usually starts with `192.168...` or `100...`).
+
+---
+
+#### Step 3: Connect Wirelessly & Run Scrcpy
+
+1. Ensure your laptop and phone are connected to the **same Wi-Fi network**.
+2. In your laptop's Command Prompt, connect to your phone using its IP address:
+```cmd
+adb connect <your-phone-ip>:5555
+
+```
+
+
+*(Example: `adb connect 100.73.148.192:5555`)*
+3. Once it says **"connected to..."**, simply type:
+```cmd
+scrcpy
+
+```
+
+
+
+Your phone screen will instantly pop up on your laptop with zero lag, exactly like using a physical USB lead!
+
+---
+
+### Quick Future Reconnection
+
+Whenever you want to use it again later, just ensure Wi-Fi is on, open CMD, type `adb connect <your-phone-ip>:5555`, and then run `scrcpy`.
